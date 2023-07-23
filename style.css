@@ -1,0 +1,93 @@
+body {
+    background-color: #000000;
+}
+
+/* 얼굴 */
+.all{
+    position: absolute;
+    width: 280px;
+    height: 230px;
+    background-color: #ffe4c4;
+    border-radius: 100%;
+    left:50%;
+    top:50%;
+    margin:-120px 0 0 -120px
+}
+
+/* 눈 */
+.all .eye {
+    position: absolute;
+    background: #010101;
+    top: 100px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 5px solid #fafafa;
+}
+
+.all .eye.left {
+    left: 75px;
+}
+
+.all .eye.right {
+    right: 75px;
+}
+
+/* 볼 홍조 */
+.all .touch {
+    position: absolute;
+    background: #f19b9b;
+    top: 150px;
+    width: 30px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.all .touch.left {
+    left: 60px;
+}
+
+.all .touch.right {
+    right: 60px;
+}
+
+/* 입 */
+.all .mouth {
+    position: absolute;
+    background: #e64a4a;
+    width: 70px;
+    height: 50px;
+    top: 140px;
+    left: 45%;
+    margin-left: -16px;
+    border-radius: 45%; 
+}
+
+/* 뿔 이미지 삽입 */
+.horn {
+    position: relative;
+    left: 50px;
+    top: -80px;
+}
+
+/* 도깨비 방망이 이미지 삽입 */
+.all .bat {
+    transform: rotate(20deg);
+    position: relative;
+    right: -300px;
+    top: -200px;
+}
+
+/* 도깨비 방망이 애니메이션 효과 */
+.all .bat {
+    z-index: 100;
+    /* 이름, 한번 재생 시 소요시간, 재생 방식, 재생 횟수 */
+    /* ball-move, 1초, 서서히 시작 서서히 종료, 무한대 */
+    -webkit-animation: head-move 1s ease-in-out infinite;
+}
+
+@-webkit-keyframes head-move {
+    50% { 
+        -webkit-transform: rotate(-1.5deg); 
+    }
+}
